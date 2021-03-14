@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'/>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'/>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'/>
+    <title>Book list</title>
+</head>
+<body>
+    {{#each result}}
+    <div class='book__list'>
+        <h2>{{title}}</h2>
+        <p>{{description}}</p>
+        <strong>{{price}}</strong>
+        <h3>{{author}}</h3>
+    </div>
+    <button><a href="/add-book">Add Book</button>
+    <button id="edit"><a href='/book/{{id}}/book-edit'>Edit</a></button>
+    <button id="show"><a href="/book/{{id}}">Show</a></button>
+    <button id="delete"><a href="/book/delete/{{id}}">Delete</a></button>
+    {{/each}}
+</body>
+</html>
